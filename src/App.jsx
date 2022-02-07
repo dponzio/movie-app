@@ -6,22 +6,30 @@ import Paper from '@mui/material/Paper';
 function App() {
   // Using grid layouts: https://www.youtube.com/watch?v=GYTN5JdkLSQ&ab_channel=TheNetNinja
   return (
-      <div className="App">
-        <Grid container>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
+    <div className="App">
+      <Grid container>
+        <Grid item md={2}>
+          <Paper>
+            <ArtistCard />
+          </Paper>
         </Grid>
-      </div>
+        <Grid item md={2}>
+          <Paper>
+            <ArtistCard />
+          </Paper>
+        </Grid>
+        <Grid item md={2}>
+          <Paper>
+            <ArtistCard />
+          </Paper>
+        </Grid>
+        <Grid item md={2}>
+          <Paper>
+            <ArtistCard />
+          </Paper>
+        </Grid>
+      </Grid>
+    </div>
   );
 }
 
