@@ -1,28 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Movie from './Movie';
 import ArtistCard from './Card';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
   // Using grid layouts: https://www.youtube.com/watch?v=GYTN5JdkLSQ&ab_channel=TheNetNinja
   return (
-      <div className="App">
-        <Grid container>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-          <Grid item md={2}>
-            <Paper><ArtistCard /></Paper>
-          </Grid>
-        </Grid>
-      </div>
+    <Movie />
   );
 }
 
