@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css';
 import ArtistCard from './Card';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
