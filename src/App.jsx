@@ -1,33 +1,19 @@
 import * as React from 'react';
-import ArtistCard from './Card';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import MovieSearch from './MovieSearch';
+import MovieResults from './MovieResults';
+import ActorResults from './ActorResults';
 
 function App() {
-  // Using grid layouts: https://www.youtube.com/watch?v=GYTN5JdkLSQ&ab_channel=TheNetNinja
+  const [movie, setMovie] = React.useState(null);
+  const [actor, setActor] = React.useState(null);
+
   return (
     <div className="App">
       <Grid container>
-        <Grid item md={2}>
-          <Paper>
-            <ArtistCard />
-          </Paper>
-        </Grid>
-        <Grid item md={2}>
-          <Paper>
-            <ArtistCard />
-          </Paper>
-        </Grid>
-        <Grid item md={2}>
-          <Paper>
-            <ArtistCard />
-          </Paper>
-        </Grid>
-        <Grid item md={2}>
-          <Paper>
-            <ArtistCard />
-          </Paper>
-        </Grid>
+        <MovieSearch setMovie={setMovie} />
+        {movie && <MovieResults movie={movie} setActor={setActor} />}
+        {actor && <ActorResults actor={actor} />}
       </Grid>
     </div>
   );
