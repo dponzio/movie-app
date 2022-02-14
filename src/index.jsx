@@ -7,8 +7,8 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark'
-  }
+    mode: 'dark',
+  },
 });
 
 ReactDOM.render(
