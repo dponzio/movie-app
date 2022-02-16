@@ -1,20 +1,20 @@
 import React from 'react';
 import ArtistCard from './Card';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+// import CardActions from '@material-ui/core/CardActions';
+// import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import { MovieCreation } from '@mui/icons-material';
+// import { MovieCreation } from '@mui/icons-material';
 
 const styles = theme => ({
   appBar: {
