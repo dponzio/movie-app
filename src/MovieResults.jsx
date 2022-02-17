@@ -86,13 +86,6 @@ function Movie({ classes, movie }) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Movies
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <div>
         {data && (
           <main>
@@ -161,21 +154,6 @@ function Movie({ classes, movie }) {
           </main>
         )}
       </div>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }
