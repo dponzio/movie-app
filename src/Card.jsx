@@ -25,7 +25,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-function ArtistCard() {
+function ArtistCard({ artist }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -33,56 +33,62 @@ function ArtistCard() {
   };
 
   return (
-	<Card sx={{ maxWidth: 345 }}>
-		<CardHeader
-		// avatar={
-		// 	<Avatar sx={{ bgcolor: red[500] }} aria-label="artist card">
-		// 	R
-		// 	</Avatar>
-		// }
-		action={
-			<IconButton aria-label="settings">
-			<MoreVertIcon />
-			</IconButton>
-		}
-		subheader="Artist Name"
-		/>
-		<CardMedia
-		component="img"
-		height="194"
-		image="https://media.npr.org/assets/artslife/movies/2009/08/cold-souls/giamatti-4508e94c2609b7fda149bcf93c4ab2103b504ee3-s1100-c50.jpg"
-		alt="Artist name"
-		/>
-		<CardContent>
-		<Typography variant="body" color="text.secondary" fontWeight='fontWeightSmall'>
-			Top 3 movies they've been in.
-		</Typography>
-		</CardContent>
-		<CardActions disableSpacing>
-		<IconButton aria-label="add to favorites">
-			<FavoriteIcon />
-		</IconButton>
-		<IconButton aria-label="share">
-			<ShareIcon />
-		</IconButton>
-		<ExpandMore
-			expand={expanded}
-			onClick={handleExpandClick}
-			aria-expanded={expanded}
-			aria-label="show more"
-		>
-			<ExpandMoreIcon />
-		</ExpandMore>
-		</CardActions>
-		<Collapse in={expanded} timeout="auto" unmountOnExit>
-		<CardContent>
-			<Typography paragraph variant="body">Bio:</Typography>
-			<Typography paragraph variant="body">
-			Quick bio could go here
-			</Typography>
-		</CardContent>
-		</Collapse>
-	</Card>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardHeader
+        // avatar={
+        // 	<Avatar sx={{ bgcolor: red[500] }} aria-label="artist card">
+        // 	R
+        // 	</Avatar>
+        // }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        subheader={artist.name}
+      />
+      <CardMedia
+        component="img"
+        height="194"
+        image={`https://www.themoviedb.org/t/p/w1280${artist.profile_path}`}
+        alt="Artist name"
+      />
+      <CardContent>
+        <Typography
+          variant="body"
+          color="text.secondary"
+          fontWeight="fontWeightSmall"
+        >
+          Top 3 movies they've been in.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph variant="body">
+            Bio:
+          </Typography>
+          <Typography paragraph variant="body">
+            Quick bio could go here
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
   );
 }
 

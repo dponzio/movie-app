@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Grid container>
-        <div>{loading && <div>I'm loading!!!</div>}</div>
-        <div>{data && <div>{JSON.stringify(data)}</div>}</div>
+        {/* <div>{loading && <div>I'm loading!!!</div>}</div> */}
+        {/* <div>{data && <div>{JSON.stringify(data)}</div>}</div> */}
         <MovieSearch setMovie={setMovie} />
         {movie && <MovieResults movie={movie} setActor={setActor} />}
         {actor && <ActorResults actor={actor} />}
